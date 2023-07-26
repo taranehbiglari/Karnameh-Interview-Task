@@ -1,4 +1,4 @@
-import Detail from "../../components/Questions/Detail";
+import Detail from "../../components/QuestionList/Detail";
 const QuestionDetails = () => {
   return <Detail />
 };

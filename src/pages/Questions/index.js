@@ -1,6 +1,7 @@
-import QuestionsList from "../../components/Questions";
+import QuestionList from "../../components/QuestionList";
+
 const Questions = () => {
-  return <QuestionsList />
+  return <QuestionList />
 };
 
 export default Questions;
