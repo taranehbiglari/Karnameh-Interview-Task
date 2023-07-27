@@ -1,6 +1,6 @@
 # Karnameh Question List
 
-This project is a vendor list from **Snappfood** vendors that is created using *React* and *RESTful api*.
+This project is a question list from **Karnameh** QA questions that is created using *React* and *RESTful api*.
 
 
 # Featuring
