@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import profile from "../../../assets/images/images.png";
 import { Link } from "react-router-dom";
 
-const QuestionCard = (prop) => {
+const QuestionCard = ({ data }) => {
   return (
     <>
       <div
@@ -17,13 +17,13 @@ const QuestionCard = (prop) => {
               width="32"
               height="32"
             />
-            <h1 className="text-base bont-bold">{prop.data.title}</h1>
+            <h1 className="text-base bont-bold">{data?.title}</h1>
           </div>
-          <span>{prop.data.date}</span>
+          <h1>{data?.time}</h1>
         </div>
-        <p className="p-4 text-sm font-normal">{prop.data.body}</p>
+        <p className="p-4 text-sm font-normal">{data?.body}</p>
         <button className="bg-transparent float-left m-4 text-xs hover:bg-green-500 text-green-600 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
-          <Link to={`/questions/${prop.data.id}`}>مشاهده جزییات</Link>
+          <Link to={`/questions/${data.id}`}>مشاهده جزییات</Link>
         </button>
       </div>
     </>
