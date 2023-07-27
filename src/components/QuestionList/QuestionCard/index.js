@@ -23,7 +23,7 @@ const QuestionCard = ({ data }) => {
         </div>
         <p className="p-4 text-sm font-normal">{data?.body}</p>
         <button className="bg-transparent float-left m-4 text-xs hover:bg-green-500 text-green-600 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
-          <Link to={`/questions/${data.id}`}>مشاهده جزییات</Link>
+          <Link to={`/questions/${data?.id}`}>مشاهده جزییات</Link>
         </button>
       </div>
     </>
