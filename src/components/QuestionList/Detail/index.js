@@ -22,7 +22,7 @@ const Detail = () => {
     <>
       <Navbar title="جزییات سوال" />
       <div className="mt-32">
-        <QuestionCard data={data} />
+        <QuestionCard isList={false} data={data} />
         <div className="p-10">
           <label className="font-extrabold text-2xl">پاسخ ها</label>
           <textarea

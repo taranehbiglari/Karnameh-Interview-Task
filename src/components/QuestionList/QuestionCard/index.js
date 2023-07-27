@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import profile from "../../../assets/images/images.png";
 import { Link } from "react-router-dom";
 
-const QuestionCard = ({ data }) => {
+const QuestionCard = ({ data, isList }) => {
   return (
     <>
       <div
@@ -22,9 +22,11 @@ const QuestionCard = ({ data }) => {
           <h1>{data?.time}</h1>
         </div>
         <p className="p-4 text-sm font-normal">{data?.body}</p>
-        <button className="bg-transparent float-left m-4 text-xs hover:bg-green-500 text-green-600 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
-          <Link to={`/questions/${data?.id}`}>مشاهده جزییات</Link>
-        </button>
+        {isList ? (
+          <button className="bg-transparent float-left m-4 text-xs hover:bg-green-500 text-green-600 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
+            <Link to={`/questions/${data?.id}`}>مشاهده جزییات</Link>
+          </button>
+        ) : null}
       </div>
     </>
   );

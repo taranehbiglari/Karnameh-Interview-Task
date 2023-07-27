@@ -23,7 +23,7 @@ const QuestionList= () => {
         <div className="d-flex justify-center flex-column">
           {data.map((question) => (
             <div key={question.id}>
-              <QuestionCard data={question} />
+              <QuestionCard isList={true} data={question} />
             </div>
           ))}
         </div>
