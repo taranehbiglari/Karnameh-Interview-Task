@@ -1,16 +1,16 @@
+import React from'react';
 
-import React from "react";
-import style from "./style.module.scss";
-
-const Modal = props => {
-  return (
-    <div className={style.popup_box}>
-      <div className={style.box}>
-        <span className={style.close_icon} onClick={props.handleClose}>x</span>
-        {props.content}
-      </div>
-    </div>
-  );
+const Modal = ({ isOpen, toggle, children }) => {
+    return (
+        <>
+            {isOpen ? (
+                <>
+                    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" onClick={toggle}/>
+                    <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">{children}</div>
+                </>
+            ) : null}
+        </>
+    );
 };
 
 export default Modal;
